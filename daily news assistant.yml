@@ -1,0 +1,1370 @@
+app:
+  description: 每日资讯助手
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: advanced-chat
+  name: daily news assistant
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/deepseek:0.0.6@dd589dc093c8084925858034ab5ec1fdf0d33819f43226c2f8c4a749a9acbbb2
+kind: app
+version: 0.3.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1751873205937-source-1751874418657-target
+      source: '1751873205937'
+      sourceHandle: source
+      target: '1751874418657'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 17518739530710-source-17519422151520-target
+      source: '17518739530710'
+      sourceHandle: source
+      target: '17519422151520'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 17518740480160-source-17519422206720-target
+      source: '17518740480160'
+      sourceHandle: source
+      target: '17519422206720'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 17518740473040-source-17519422747960-target
+      source: '17518740473040'
+      sourceHandle: source
+      target: '17519422747960'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 17518740525030-source-17519422698180-target
+      source: '17518740525030'
+      sourceHandle: source
+      target: '17519422698180'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 17518740546760-source-17519422233880-target
+      source: '17518740546760'
+      sourceHandle: source
+      target: '17519422233880'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 17518740564930-source-17519422256190-target
+      source: '17518740564930'
+      sourceHandle: source
+      target: '17519422256190'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 17518740585340-source-17519422280260-target
+      source: '17518740585340'
+      sourceHandle: source
+      target: '17519422280260'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 17518740607970-source-17519422301080-target
+      source: '17518740607970'
+      sourceHandle: source
+      target: '17519422301080'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 17518742890460-source-17519422318830-target
+      source: '17518742890460'
+      sourceHandle: source
+      target: '17519422318830'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1751533818756-source-1751873205937-target
+      source: '1751533818756'
+      sourceHandle: source
+      target: '1751873205937'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1751533818756-source-17518739530710-target
+      source: '1751533818756'
+      sourceHandle: source
+      target: '17518739530710'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1751533818756-source-17518740480160-target
+      source: '1751533818756'
+      sourceHandle: source
+      target: '17518740480160'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1751533818756-source-17518740473040-target
+      source: '1751533818756'
+      sourceHandle: source
+      target: '17518740473040'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1751533818756-source-17518740525030-target
+      source: '1751533818756'
+      sourceHandle: source
+      target: '17518740525030'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1751533818756-source-17518740546760-target
+      source: '1751533818756'
+      sourceHandle: source
+      target: '17518740546760'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1751533818756-source-17518740564930-target
+      source: '1751533818756'
+      sourceHandle: source
+      target: '17518740564930'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1751533818756-source-17518740585340-target
+      source: '1751533818756'
+      sourceHandle: source
+      target: '17518740585340'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1751533818756-source-17518740607970-target
+      source: '1751533818756'
+      sourceHandle: source
+      target: '17518740607970'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: 1751533818756-source-17518742890460-target
+      source: '1751533818756'
+      sourceHandle: source
+      target: '17518742890460'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 1751874418657-source-1751942478326-target
+      source: '1751874418657'
+      sourceHandle: source
+      target: '1751942478326'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 17519422151520-source-1751942478326-target
+      source: '17519422151520'
+      sourceHandle: source
+      target: '1751942478326'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1751942478326-source-answer-target
+      source: '1751942478326'
+      sourceHandle: source
+      target: answer
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 17519422206720-source-1751942478326-target
+      source: '17519422206720'
+      sourceHandle: source
+      target: '1751942478326'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 17519422747960-source-1751942478326-target
+      source: '17519422747960'
+      sourceHandle: source
+      target: '1751942478326'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 17519422698180-source-1751942478326-target
+      source: '17519422698180'
+      sourceHandle: source
+      target: '1751942478326'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 17519422233880-source-1751942478326-target
+      source: '17519422233880'
+      sourceHandle: source
+      target: '1751942478326'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 17519422256190-source-1751942478326-target
+      source: '17519422256190'
+      sourceHandle: source
+      target: '1751942478326'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 17519422280260-source-1751942478326-target
+      source: '17519422280260'
+      sourceHandle: source
+      target: '1751942478326'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 17519422301080-source-1751942478326-target
+      source: '17519422301080'
+      sourceHandle: source
+      target: '1751942478326'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: llm
+      id: 17519422318830-source-1751942478326-target
+      source: '17519422318830'
+      sourceHandle: source
+      target: '1751942478326'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables: []
+      height: 53
+      id: '1751533818756'
+      position:
+        x: 59.88500435209289
+        y: 157.01981629687944
+      positionAbsolute:
+        x: 59.88500435209289
+        y: 157.01981629687944
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        answer: '{{#1751942478326.text#}}'
+        desc: ''
+        selected: false
+        title: 直接回复
+        type: answer
+        variables: []
+      height: 104
+      id: answer
+      position:
+        x: 1500.6677093885128
+        y: 143.58383717699388
+      positionAbsolute:
+        x: 1500.6677093885128
+        y: 143.58383717699388
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    import requests\n\n    url = \"https://api.vvhan.com/api/hotlist/pengPai\"\
+          \n\n    def extract_last_segment(url):\n        if not url:\n          \
+          \  return None\n        return url.rstrip('/').split('/')[-1]\n    name\
+          \ = extract_last_segment(url)\n\n    \n    response = requests.get(url)\n\
+          \    response.raise_for_status()\n    data = response.json()\n    # 取前十条新闻\n\
+          \    news_list = data.get(\"data\", [])[:10]\n    # hot_news只保留title和url\n\
+          \    title_list = []\n    for item in news_list:\n        title_list.append(item.get(\"\
+          title\"))\n\n    url_list = []\n    for item in news_list:\n        url_list.append(item.get(\"\
+          url\"))\n        \n    result = {\n        'name': name,\n        'title_list':\
+          \ title_list,\n        'url_list': url_list\n    }\n    return result\n\
+          \   "
+        code_language: python3
+        desc: ''
+        outputs:
+          name:
+            children: null
+            type: string
+          title_list:
+            children: null
+            type: array[string]
+          url_list:
+            children: null
+            type: array[string]
+        selected: false
+        title: pengpai
+        type: code
+        variables: []
+      height: 53
+      id: '1751873205937'
+      position:
+        x: 467.9686125889747
+        y: -216.60761404195097
+      positionAbsolute:
+        x: 467.9686125889747
+        y: -216.60761404195097
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    import requests\n\n    url = \"https://api.vvhan.com/api/hotlist/wbHot\"\
+          \n\n    def extract_last_segment(url):\n        if not url:\n          \
+          \  return None\n        return url.rstrip('/').split('/')[-1]\n    name\
+          \ = extract_last_segment(url)\n\n    \n    response = requests.get(url)\n\
+          \    response.raise_for_status()\n    data = response.json()\n    # 取前十条新闻\n\
+          \    news_list = data.get(\"data\", [])[:10]\n    # hot_news只保留title和url\n\
+          \    title_list = []\n    for item in news_list:\n        title_list.append(item.get(\"\
+          title\"))\n\n    url_list = []\n    for item in news_list:\n        url_list.append(item.get(\"\
+          url\"))\n        \n    result = {\n        'name': name,\n        'title_list':\
+          \ title_list,\n        'url_list': url_list\n    }\n    return result\n\
+          \   "
+        code_language: python3
+        desc: ''
+        outputs:
+          name:
+            children: null
+            type: string
+          title_list:
+            children: null
+            type: array[string]
+          url_list:
+            children: null
+            type: array[string]
+        selected: false
+        title: weibo
+        type: code
+        variables: []
+      height: 53
+      id: '17518739530710'
+      position:
+        x: 467.9686125889747
+        y: -139.7229420292899
+      positionAbsolute:
+        x: 467.9686125889747
+        y: -139.7229420292899
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    import requests\n\n    url = \"https://api.vvhan.com/api/hotlist/huPu\"\
+          \n\n    def extract_last_segment(url):\n        if not url:\n          \
+          \  return None\n        return url.rstrip('/').split('/')[-1]\n    name\
+          \ = extract_last_segment(url)\n\n    \n    response = requests.get(url)\n\
+          \    response.raise_for_status()\n    data = response.json()\n    # 取前十条新闻\n\
+          \    news_list = data.get(\"data\", [])[:10]\n    # hot_news只保留title和url\n\
+          \    title_list = []\n    for item in news_list:\n        title_list.append(item.get(\"\
+          title\"))\n\n    url_list = []\n    for item in news_list:\n        url_list.append(item.get(\"\
+          url\"))\n        \n    result = {\n        'name': name,\n        'title_list':\
+          \ title_list,\n        'url_list': url_list\n    }\n    return result\n\
+          \   "
+        code_language: python3
+        desc: ''
+        outputs:
+          name:
+            children: null
+            type: string
+          title_list:
+            children: null
+            type: array[string]
+          url_list:
+            children: null
+            type: array[string]
+        selected: false
+        title: hupu
+        type: code
+        variables: []
+      height: 53
+      id: '17518740473040'
+      position:
+        x: 439.41530565433095
+        y: 93.12826459946515
+      positionAbsolute:
+        x: 439.41530565433095
+        y: 93.12826459946515
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    import requests\n\n    url = \"https://api.vvhan.com/api/hotlist/toutiao\"\
+          \n\n    def extract_last_segment(url):\n        if not url:\n          \
+          \  return None\n        return url.rstrip('/').split('/')[-1]\n    name\
+          \ = extract_last_segment(url)\n\n    \n    response = requests.get(url)\n\
+          \    response.raise_for_status()\n    data = response.json()\n    # 取前十条新闻\n\
+          \    news_list = data.get(\"data\", [])[:10]\n    # hot_news只保留title和url\n\
+          \    title_list = []\n    for item in news_list:\n        title_list.append(item.get(\"\
+          title\"))\n\n    url_list = []\n    for item in news_list:\n        url_list.append(item.get(\"\
+          url\"))\n        \n    result = {\n        'name': name,\n        'title_list':\
+          \ title_list,\n        'url_list': url_list\n    }\n    return result\n\
+          \   "
+        code_language: python3
+        desc: ''
+        outputs:
+          name:
+            children: null
+            type: string
+          title_list:
+            children: null
+            type: array[string]
+          url_list:
+            children: null
+            type: array[string]
+        selected: false
+        title: toutiao
+        type: code
+        variables: []
+      height: 53
+      id: '17518740480160'
+      position:
+        x: 459.119621018966
+        y: -48.205228210377214
+      positionAbsolute:
+        x: 459.119621018966
+        y: -48.205228210377214
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    import requests\n\n    url = \"https://api.vvhan.com/api/hotlist/zhihuDay\"\
+          \n\n    def extract_last_segment(url):\n        if not url:\n          \
+          \  return None\n        return url.rstrip('/').split('/')[-1]\n    name\
+          \ = extract_last_segment(url)\n\n    \n    response = requests.get(url)\n\
+          \    response.raise_for_status()\n    data = response.json()\n    # 取前十条新闻\n\
+          \    news_list = data.get(\"data\", [])[:10]\n    # hot_news只保留title和url\n\
+          \    title_list = []\n    for item in news_list:\n        title_list.append(item.get(\"\
+          title\"))\n\n    url_list = []\n    for item in news_list:\n        url_list.append(item.get(\"\
+          url\"))\n        \n    result = {\n        'name': name,\n        'title_list':\
+          \ title_list,\n        'url_list': url_list\n    }\n    return result\n\
+          \   "
+        code_language: python3
+        desc: ''
+        outputs:
+          name:
+            children: null
+            type: string
+          title_list:
+            children: null
+            type: array[string]
+          url_list:
+            children: null
+            type: array[string]
+        selected: false
+        title: zhihu
+        type: code
+        variables: []
+      height: 53
+      id: '17518740525030'
+      position:
+        x: 434.74420524667437
+        y: 196.37794292700738
+      positionAbsolute:
+        x: 434.74420524667437
+        y: 196.37794292700738
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    import requests\n\n    url = \"https://api.vvhan.com/api/hotlist/36Ke\"\
+          \n\n    def extract_last_segment(url):\n        if not url:\n          \
+          \  return None\n        return url.rstrip('/').split('/')[-1]\n    name\
+          \ = extract_last_segment(url)\n\n    \n    response = requests.get(url)\n\
+          \    response.raise_for_status()\n    data = response.json()\n    # 取前十条新闻\n\
+          \    news_list = data.get(\"data\", [])[:10]\n    # hot_news只保留title和url\n\
+          \    title_list = []\n    for item in news_list:\n        title_list.append(item.get(\"\
+          title\"))\n\n    url_list = []\n    for item in news_list:\n        url_list.append(item.get(\"\
+          url\"))\n        \n    result = {\n        'name': name,\n        'title_list':\
+          \ title_list,\n        'url_list': url_list\n    }\n    return result\n\
+          \   "
+        code_language: python3
+        desc: ''
+        outputs:
+          name:
+            children: null
+            type: string
+          title_list:
+            children: null
+            type: array[string]
+          url_list:
+            children: null
+            type: array[string]
+        selected: false
+        title: 36ke
+        type: code
+        variables: []
+      height: 53
+      id: '17518740546760'
+      position:
+        x: 439.41530565433095
+        y: 304.63548858894956
+      positionAbsolute:
+        x: 439.41530565433095
+        y: 304.63548858894956
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    import requests\n\n    url = \"https://api.vvhan.com/api/hotlist/baiduRD\"\
+          \n\n    def extract_last_segment(url):\n        if not url:\n          \
+          \  return None\n        return url.rstrip('/').split('/')[-1]\n    name\
+          \ = extract_last_segment(url)\n\n    \n    response = requests.get(url)\n\
+          \    response.raise_for_status()\n    data = response.json()\n    # 取前十条新闻\n\
+          \    news_list = data.get(\"data\", [])[:10]\n    # hot_news只保留title和url\n\
+          \    title_list = []\n    for item in news_list:\n        title_list.append(item.get(\"\
+          title\"))\n\n    url_list = []\n    for item in news_list:\n        url_list.append(item.get(\"\
+          url\"))\n        \n    result = {\n        'name': name,\n        'title_list':\
+          \ title_list,\n        'url_list': url_list\n    }\n    return result\n\
+          \   "
+        code_language: python3
+        desc: ''
+        outputs:
+          name:
+            children: null
+            type: string
+          title_list:
+            children: null
+            type: array[string]
+          url_list:
+            children: null
+            type: array[string]
+        selected: false
+        title: baidu
+        type: code
+        variables: []
+      height: 53
+      id: '17518740564930'
+      position:
+        x: 420.26319326181624
+        y: 393.8993568070437
+      positionAbsolute:
+        x: 420.26319326181624
+        y: 393.8993568070437
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    import requests\n\n    url = \"https://api.vvhan.com/api/hotlist/douyinHot\"\
+          \n\n    def extract_last_segment(url):\n        if not url:\n          \
+          \  return None\n        return url.rstrip('/').split('/')[-1]\n    name\
+          \ = extract_last_segment(url)\n\n    \n    response = requests.get(url)\n\
+          \    response.raise_for_status()\n    data = response.json()\n    # 取前十条新闻\n\
+          \    news_list = data.get(\"data\", [])[:10]\n    # hot_news只保留title和url\n\
+          \    title_list = []\n    for item in news_list:\n        title_list.append(item.get(\"\
+          title\"))\n\n    url_list = []\n    for item in news_list:\n        url_list.append(item.get(\"\
+          url\"))\n        \n    result = {\n        'name': name,\n        'title_list':\
+          \ title_list,\n        'url_list': url_list\n    }\n    return result\n\
+          \   "
+        code_language: python3
+        desc: ''
+        outputs:
+          name:
+            children: null
+            type: string
+          title_list:
+            children: null
+            type: array[string]
+          url_list:
+            children: null
+            type: array[string]
+        selected: false
+        title: douyin
+        type: code
+        variables: []
+      height: 53
+      id: '17518740585340'
+      position:
+        x: 434.74420524667437
+        y: 483.9013540594461
+      positionAbsolute:
+        x: 434.74420524667437
+        y: 483.9013540594461
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    import requests\n\n    url = \"https://api.vvhan.com/api/hotlist/douban\"\
+          \n\n    def extract_last_segment(url):\n        if not url:\n          \
+          \  return None\n        return url.rstrip('/').split('/')[-1]\n    name\
+          \ = extract_last_segment(url)\n\n    \n    response = requests.get(url)\n\
+          \    response.raise_for_status()\n    data = response.json()\n    # 取前十条新闻\n\
+          \    news_list = data.get(\"data\", [])[:10]\n    # hot_news只保留title和url\n\
+          \    title_list = []\n    for item in news_list:\n        title_list.append(item.get(\"\
+          title\"))\n\n    url_list = []\n    for item in news_list:\n        url_list.append(item.get(\"\
+          url\"))\n        \n    result = {\n        'name': name,\n        'title_list':\
+          \ title_list,\n        'url_list': url_list\n    }\n    return result\n\
+          \   "
+        code_language: python3
+        desc: ''
+        outputs:
+          name:
+            children: null
+            type: string
+          title_list:
+            children: null
+            type: array[string]
+          url_list:
+            children: null
+            type: array[string]
+        selected: false
+        title: douban
+        type: code
+        variables: []
+      height: 53
+      id: '17518740607970'
+      position:
+        x: 434.74420524667437
+        y: 580.68556020127
+      positionAbsolute:
+        x: 434.74420524667437
+        y: 580.68556020127
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        code: "\ndef main() -> dict:\n    import requests\n\n    url = \"https://api.vvhan.com/api/hotlist/itNews\"\
+          \n\n    def extract_last_segment(url):\n        if not url:\n          \
+          \  return None\n        return url.rstrip('/').split('/')[-1]\n    name\
+          \ = extract_last_segment(url)\n\n    \n    response = requests.get(url)\n\
+          \    response.raise_for_status()\n    data = response.json()\n    # 取前十条新闻\n\
+          \    news_list = data.get(\"data\", [])[:10]\n    # hot_news只保留title和url\n\
+          \    title_list = []\n    for item in news_list:\n        title_list.append(item.get(\"\
+          title\"))\n\n    url_list = []\n    for item in news_list:\n        url_list.append(item.get(\"\
+          url\"))\n        \n    result = {\n        'name': name,\n        'title_list':\
+          \ title_list,\n        'url_list': url_list\n    }\n    return result\n\
+          \   "
+        code_language: python3
+        desc: ''
+        outputs:
+          name:
+            children: null
+            type: string
+          title_list:
+            children: null
+            type: array[string]
+          url_list:
+            children: null
+            type: array[string]
+        selected: false
+        title: itnews
+        type: code
+        variables: []
+      height: 53
+      id: '17518742890460'
+      position:
+        x: 439.41530565433095
+        y: 650.32960526496
+      positionAbsolute:
+        x: 439.41530565433095
+        y: 650.32960526496
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: c3fdb36f-a598-42a9-bcd5-8e9c0a21ef3e
+          role: system
+          text: "任务：将输入数据{{#1751873205937.name#}},{{#1751873205937.title_list#}},{{#1751873205937.url_list#}}重新组织下逻辑，转换为指定的JSON格式\n\
+            \n输入：\n大标题：{{name}}\n标题列表：{{title_list}}\n链接列表：{{url_list}}\n\n参考示例：\n\
+            输入：\n- 大标题：热门资讯\n- 标题列表：[\"新闻1\", \"新闻2\", \"新闻3\"]\n- 链接列表：[\"http://news1.com\"\
+            , \"http://news2.com\", \"http://news3.com\"]\n\n输出：\n{\n  \"name\": \"\
+            热门资讯\",\n  \"items\": [\n    {\"id\": 1, \"title\": \"新闻1\", \"url\":\
+            \ \"http://news1.com\"},\n    {\"id\": 2, \"title\": \"新闻2\", \"url\"\
+            : \"http://news2.com\"},\n    {\"id\": 3, \"title\": \"新闻3\", \"url\"\
+            : \"http://news3.com\"}\n  ]\n}\n\n现在请按照相同格式处理实际输入数据，直接输出JSON："
+        selected: false
+        title: LLM1
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '1751874418657'
+      position:
+        x: 793.4453507475394
+        y: -223.3009863614687
+      positionAbsolute:
+        x: 793.4453507475394
+        y: -223.3009863614687
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: c3fdb36f-a598-42a9-bcd5-8e9c0a21ef3e
+          role: system
+          text: "任务：将输入数据{{#17518739530710.name#}},{{#17518739530710.title_list#}},{{#17518739530710.url_list#}}重新组织下逻辑，转换为指定的JSON格式\n\
+            \n输入：\n大标题：{{name}}\n标题列表：{{title_list}}\n链接列表：{{url_list}}\n\n参考示例：\n\
+            输入：\n- 大标题：热门资讯\n- 标题列表：[\"新闻1\", \"新闻2\", \"新闻3\"]\n- 链接列表：[\"http://news1.com\"\
+            , \"http://news2.com\", \"http://news3.com\"]\n\n输出：\n{\n  \"name\": \"\
+            热门资讯\",\n  \"items\": [\n    {\"id\": 1, \"title\": \"新闻1\", \"url\":\
+            \ \"http://news1.com\"},\n    {\"id\": 2, \"title\": \"新闻2\", \"url\"\
+            : \"http://news2.com\"},\n    {\"id\": 3, \"title\": \"新闻3\", \"url\"\
+            : \"http://news3.com\"}\n  ]\n}\n\n现在请按照相同格式处理实际输入数据，直接输出JSON："
+        selected: false
+        title: LLM2
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17519422151520'
+      position:
+        x: 819.212532378216
+        y: -127.81084267131357
+      positionAbsolute:
+        x: 819.212532378216
+        y: -127.81084267131357
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: c3fdb36f-a598-42a9-bcd5-8e9c0a21ef3e
+          role: system
+          text: "任务：将输入数据{{#17518740480160.name#}},{{#17518740480160.title_list#}},{{#17518740480160.url_list#}}重新组织下逻辑，转换为指定的JSON格式\n\
+            \n输入：\n大标题：{{name}}\n标题列表：{{title_list}}\n链接列表：{{url_list}}\n\n参考示例：\n\
+            输入：\n- 大标题：热门资讯\n- 标题列表：[\"新闻1\", \"新闻2\", \"新闻3\"]\n- 链接列表：[\"http://news1.com\"\
+            , \"http://news2.com\", \"http://news3.com\"]\n\n输出：\n{\n  \"name\": \"\
+            热门资讯\",\n  \"items\": [\n    {\"id\": 1, \"title\": \"新闻1\", \"url\":\
+            \ \"http://news1.com\"},\n    {\"id\": 2, \"title\": \"新闻2\", \"url\"\
+            : \"http://news2.com\"},\n    {\"id\": 3, \"title\": \"新闻3\", \"url\"\
+            : \"http://news3.com\"}\n  ]\n}\n\n现在请按照相同格式处理实际输入数据，直接输出JSON："
+        selected: false
+        title: LLM3
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17519422206720'
+      position:
+        x: 805.5710832796224
+        y: -30.804982414648094
+      positionAbsolute:
+        x: 805.5710832796224
+        y: -30.804982414648094
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: c3fdb36f-a598-42a9-bcd5-8e9c0a21ef3e
+          role: system
+          text: "任务：将输入数据{{#17518740546760.name#}},{{#17518740546760.title_list#}},{{#17518740546760.url_list#}}重新组织下逻辑，转换为指定的JSON格式\n\
+            \n输入：\n大标题：{{name}}\n标题列表：{{title_list}}\n链接列表：{{url_list}}\n\n参考示例：\n\
+            输入：\n- 大标题：热门资讯\n- 标题列表：[\"新闻1\", \"新闻2\", \"新闻3\"]\n- 链接列表：[\"http://news1.com\"\
+            , \"http://news2.com\", \"http://news3.com\"]\n\n输出：\n{\n  \"name\": \"\
+            热门资讯\",\n  \"items\": [\n    {\"id\": 1, \"title\": \"新闻1\", \"url\":\
+            \ \"http://news1.com\"},\n    {\"id\": 2, \"title\": \"新闻2\", \"url\"\
+            : \"http://news2.com\"},\n    {\"id\": 3, \"title\": \"新闻3\", \"url\"\
+            : \"http://news3.com\"}\n  ]\n}\n\n现在请按照相同格式处理实际输入数据，直接输出JSON："
+        selected: false
+        title: LLM6
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17519422233880'
+      position:
+        x: 786.1316109729634
+        y: 283.6131341059666
+      positionAbsolute:
+        x: 786.1316109729634
+        y: 283.6131341059666
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: c3fdb36f-a598-42a9-bcd5-8e9c0a21ef3e
+          role: system
+          text: "任务：将输入数据{{#17518740564930.name#}},{{#17518740564930.title_list#}},{{#17518740564930.url_list#}}重新组织下逻辑，转换为指定的JSON格式\n\
+            \n输入：\n大标题：{{name}}\n标题列表：{{title_list}}\n链接列表：{{url_list}}\n\n参考示例：\n\
+            输入：\n- 大标题：热门资讯\n- 标题列表：[\"新闻1\", \"新闻2\", \"新闻3\"]\n- 链接列表：[\"http://news1.com\"\
+            , \"http://news2.com\", \"http://news3.com\"]\n\n输出：\n{\n  \"name\": \"\
+            热门资讯\",\n  \"items\": [\n    {\"id\": 1, \"title\": \"新闻1\", \"url\":\
+            \ \"http://news1.com\"},\n    {\"id\": 2, \"title\": \"新闻2\", \"url\"\
+            : \"http://news2.com\"},\n    {\"id\": 3, \"title\": \"新闻3\", \"url\"\
+            : \"http://news3.com\"}\n  ]\n}\n\n现在请按照相同格式处理实际输入数据，直接输出JSON："
+        selected: false
+        title: LLM7
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17519422256190'
+      position:
+        x: 798.9954725393545
+        y: 393.8993568070437
+      positionAbsolute:
+        x: 798.9954725393545
+        y: 393.8993568070437
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: c3fdb36f-a598-42a9-bcd5-8e9c0a21ef3e
+          role: system
+          text: "任务：将输入数据{{#17518740585340.name#}},{{#17518740585340.title_list#}},{{#17518740585340.url_list#}}重新组织下逻辑，转换为指定的JSON格式\n\
+            \n输入：\n大标题：{{name}}\n标题列表：{{title_list}}\n链接列表：{{url_list}}\n\n参考示例：\n\
+            输入：\n- 大标题：热门资讯\n- 标题列表：[\"新闻1\", \"新闻2\", \"新闻3\"]\n- 链接列表：[\"http://news1.com\"\
+            , \"http://news2.com\", \"http://news3.com\"]\n\n输出：\n{\n  \"name\": \"\
+            热门资讯\",\n  \"items\": [\n    {\"id\": 1, \"title\": \"新闻1\", \"url\":\
+            \ \"http://news1.com\"},\n    {\"id\": 2, \"title\": \"新闻2\", \"url\"\
+            : \"http://news2.com\"},\n    {\"id\": 3, \"title\": \"新闻3\", \"url\"\
+            : \"http://news3.com\"}\n  ]\n}\n\n现在请按照相同格式处理实际输入数据，直接输出JSON："
+        selected: false
+        title: LLM8
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17519422280260'
+      position:
+        x: 798.9954725393545
+        y: 473.8158339540745
+      positionAbsolute:
+        x: 798.9954725393545
+        y: 473.8158339540745
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: c3fdb36f-a598-42a9-bcd5-8e9c0a21ef3e
+          role: system
+          text: "任务：将输入数据{{#17518740607970.name#}},{{#17518740607970.title_list#}},{{#17518740607970.url_list#}}重新组织下逻辑，转换为指定的JSON格式\n\
+            \n输入：\n大标题：{{name}}\n标题列表：{{title_list}}\n链接列表：{{url_list}}\n\n参考示例：\n\
+            输入：\n- 大标题：热门资讯\n- 标题列表：[\"新闻1\", \"新闻2\", \"新闻3\"]\n- 链接列表：[\"http://news1.com\"\
+            , \"http://news2.com\", \"http://news3.com\"]\n\n输出：\n{\n  \"name\": \"\
+            热门资讯\",\n  \"items\": [\n    {\"id\": 1, \"title\": \"新闻1\", \"url\":\
+            \ \"http://news1.com\"},\n    {\"id\": 2, \"title\": \"新闻2\", \"url\"\
+            : \"http://news2.com\"},\n    {\"id\": 3, \"title\": \"新闻3\", \"url\"\
+            : \"http://news3.com\"}\n  ]\n}\n\n现在请按照相同格式处理实际输入数据，直接输出JSON："
+        selected: false
+        title: LLM9
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17519422301080'
+      position:
+        x: 805.5710832796224
+        y: 562.5669576979425
+      positionAbsolute:
+        x: 805.5710832796224
+        y: 562.5669576979425
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: c3fdb36f-a598-42a9-bcd5-8e9c0a21ef3e
+          role: system
+          text: "任务：将输入数据{{#17518742890460.name#}},{{#17518742890460.title_list#}},{{#17518742890460.url_list#}}重新组织下逻辑，转换为指定的JSON格式\n\
+            \n输入：\n大标题：{{name}}\n标题列表：{{title_list}}\n链接列表：{{url_list}}\n\n参考示例：\n\
+            输入：\n- 大标题：热门资讯\n- 标题列表：[\"新闻1\", \"新闻2\", \"新闻3\"]\n- 链接列表：[\"http://news1.com\"\
+            , \"http://news2.com\", \"http://news3.com\"]\n\n输出：\n{\n  \"name\": \"\
+            热门资讯\",\n  \"items\": [\n    {\"id\": 1, \"title\": \"新闻1\", \"url\":\
+            \ \"http://news1.com\"},\n    {\"id\": 2, \"title\": \"新闻2\", \"url\"\
+            : \"http://news2.com\"},\n    {\"id\": 3, \"title\": \"新闻3\", \"url\"\
+            : \"http://news3.com\"}\n  ]\n}\n\n现在请按照相同格式处理实际输入数据，直接输出JSON："
+        selected: false
+        title: LLM10
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17519422318830'
+      position:
+        x: 805.5710832796224
+        y: 673.5202154940611
+      positionAbsolute:
+        x: 805.5710832796224
+        y: 673.5202154940611
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: c3fdb36f-a598-42a9-bcd5-8e9c0a21ef3e
+          role: system
+          text: "任务：将输入数据{{#17518740525030.name#}},{{#17518740525030.title_list#}},{{#17518740525030.url_list#}}重新组织下逻辑，转换为指定的JSON格式\n\
+            \n输入：\n大标题：{{name}}\n标题列表：{{title_list}}\n链接列表：{{url_list}}\n\n参考示例：\n\
+            输入：\n- 大标题：热门资讯\n- 标题列表：[\"新闻1\", \"新闻2\", \"新闻3\"]\n- 链接列表：[\"http://news1.com\"\
+            , \"http://news2.com\", \"http://news3.com\"]\n\n输出：\n{\n  \"name\": \"\
+            热门资讯\",\n  \"items\": [\n    {\"id\": 1, \"title\": \"新闻1\", \"url\":\
+            \ \"http://news1.com\"},\n    {\"id\": 2, \"title\": \"新闻2\", \"url\"\
+            : \"http://news2.com\"},\n    {\"id\": 3, \"title\": \"新闻3\", \"url\"\
+            : \"http://news3.com\"}\n  ]\n}\n\n现在请按照相同格式处理实际输入数据，直接输出JSON："
+        selected: false
+        title: LLM5
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17519422698180'
+      position:
+        x: 786.1316109729634
+        y: 164.12626242408476
+      positionAbsolute:
+        x: 786.1316109729634
+        y: 164.12626242408476
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: c3fdb36f-a598-42a9-bcd5-8e9c0a21ef3e
+          role: system
+          text: "任务：将输入数据{{#17518740473040.name#}},{{#17518740473040.title_list#}},{{#17518740473040.url_list#}}重新组织下逻辑，转换为指定的JSON格式\n\
+            \n输入：\n大标题：{{name}}\n标题列表：{{title_list}}\n链接列表：{{url_list}}\n\n参考示例：\n\
+            输入：\n- 大标题：热门资讯\n- 标题列表：[\"新闻1\", \"新闻2\", \"新闻3\"]\n- 链接列表：[\"http://news1.com\"\
+            , \"http://news2.com\", \"http://news3.com\"]\n\n输出：\n{\n  \"name\": \"\
+            热门资讯\",\n  \"items\": [\n    {\"id\": 1, \"title\": \"新闻1\", \"url\":\
+            \ \"http://news1.com\"},\n    {\"id\": 2, \"title\": \"新闻2\", \"url\"\
+            : \"http://news2.com\"},\n    {\"id\": 3, \"title\": \"新闻3\", \"url\"\
+            : \"http://news3.com\"}\n  ]\n}\n\n现在请按照相同格式处理实际输入数据，直接输出JSON："
+        selected: false
+        title: LLM4
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 89
+      id: '17519422747960'
+      position:
+        x: 793.4453507475394
+        y: 67.05237835216604
+      positionAbsolute:
+        x: 793.4453507475394
+        y: 67.05237835216604
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            max_tokens: 8192
+            temperature: 0.7
+          mode: chat
+          name: deepseek-chat
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: 8648f875-5961-43b7-b439-84b0bcd291b2
+          role: system
+          text: '任务：将多个数据源整合为日报格式
+
+
+            输入数据：
+
+            数据源1：{{#1751874418657.text#}}
+
+            数据源2：{{#17519422151520.text#}}
+
+            数据源3：{{#17519422206720.text#}}
+
+            数据源4：{{#17519422747960.text#}}
+
+            数据源5：{{#17519422698180.text#}}
+
+            数据源6：{{#17519422233880.text#}}
+
+            数据源7：{{#17519422256190.text#}}
+
+            数据源8：{{#17519422280260.text#}}
+
+            数据源9：{{#17519422301080.text#}}
+
+            数据源10：{{#17519422318830.text#}}
+
+
+            要求：
+
+            1. 生成今日日报格式的内容
+
+            2. 每个数据源作为一个独立板块
+
+            3. 保持原有的标题和链接信息
+
+            4. 添加适当的日报标题和时间
+
+            5. 使用清晰的分段和编号
+
+
+            输出格式：
+
+            # 📊 今日资讯日报
+
+            **日期：{{current_date}}**
+
+
+            ## 🔥 {{数据源1的name}}
+
+            1. [{{title1}}]({{url1}})
+
+            2. [{{title2}}]({{url2}})
+
+            ...
+
+
+            ## 📈 {{数据源2的name}}
+
+            1. [{{title1}}]({{url1}})
+
+            2. [{{title2}}]({{url2}})
+
+            ...
+
+
+            请按照此格式整理所有输入数据：'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 5000
+        selected: false
+        title: LLM 11
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 118
+      id: '1751942478326'
+      position:
+        x: 1214.5980851568174
+        y: 143.58383717699388
+      positionAbsolute:
+        x: 1214.5980851568174
+        y: 143.58383717699388
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 243
+    viewport:
+      x: 58.19589188167913
+      y: 210.36162391990197
+      zoom: 0.4352752816480622

@@ -12,5 +12,12 @@
 需要开启dify的后端服务api，在daily_news.py中修改apikey以及发送和接收邮箱，163邮箱需要开启SMTP服务并记录授权码。
 授权码的获取可以参考https://zhuanlan.zhihu.com/p/622514194
 
+## tmux 后台运行
+##### 创建一个会话
+tmux new -s daily_news
+##### detach
+ctrl b + d
+##### 重新进入会话
+tmux attach -t daily_news
 
 
